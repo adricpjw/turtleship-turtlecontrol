@@ -1,0 +1,27 @@
+axes:
+- left joy x axis (1.0 is left, -1.0 is right)
+- left joy y axis (1.0 is up, -1,0 is down)
+- right joy x axis (1.0 is left, -1.0 is right)
+- right joy y axis (1.0 is up, -1,0 is down)
+- right trigger (1.0 is default, -1.0 is pressed)
+- left trigger (1.0 is default, -1.0 is pressed)
+- dpad horizontal (1.0 is left, -1.0 is right)
+- dpad vertical (1.0 is up, -1,0 is down)
+
+buttons:
+-A
+-B
+-??
+-X
+-Y
+-??
+-LB
+-RB
+-??
+-??
+-view (left middle button)
+-menu (right middle button
+-xbox button
+-leftjoy toggle
+-rightjoy toggle
+-screenshot buttonk
