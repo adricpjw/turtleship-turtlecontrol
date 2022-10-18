@@ -1,5 +1,5 @@
 import rclpy
-import crossing_cv2
+import turtlecontrol.crossing_cv2
 from rclpy.node import Node
 from sensor_msgs.msg import Joy
 
@@ -32,6 +32,8 @@ class TeleopCmd(Node) :
         self.initParams()
         self.initPubSub()
         self.stop = 0
+        self.prev_buttons = None
+        self.prev_axes = None
 
     def initParams(self):
         self.declare_parameters(
@@ -55,11 +57,11 @@ class TeleopCmd(Node) :
             return
 
         # Handle stop signal
-        self.stop = self.buttons[BUTTONB] 
+        self.stop = msg.buttons[BUTTONB] 
             
         # Run crossing detection
-        if self.buttons[BUTTONA]:
-            crossing_cv2.CrossingDetection.detectPedCrossing()
+        if msg.buttons[BUTTONA]:
+            turtlecontrol.crossing_cv2.CrossingDetection.detectPedCrossing()
 
 
         self.prev_buttons = msg.buttons
