@@ -41,6 +41,7 @@ class TeleopCmd(Node) :
             parameters=[
                 ('timeout',10),
                 ('velocity',100),
+                ('source', "0")
             ])
     def initPubSub(self):
         self.subscription = self.create_subscription(
@@ -61,7 +62,8 @@ class TeleopCmd(Node) :
             
         # Run crossing detection
         if msg.buttons[BUTTONA]:
-            turtlecontrol.crossing_cv2.CrossingDetection(self).detectPedCrossing()
+            source = self.get_parameter('source')
+            turtlecontrol.crossing_cv2.CrossingDetection(self).detectPedCrossing(source)
 
 
         self.prev_buttons = msg.buttons

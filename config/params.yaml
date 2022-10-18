@@ -2,3 +2,4 @@ teleop_cmd:
   ros__parameters:
     timeout: 20
     velocity: 10
+    source: "/home/apubuntu22/ros2_ws/src/turtlecontrol/turtlecontrol/resources/rumin_resized_rotated.mp4"

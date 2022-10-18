@@ -6,8 +6,8 @@ class CrossingDetection:
     def __init__(self, parent):
         self.parent = parent
 
-    def detectPedCrossing(self):
-        cap = cv2.VideoCapture('resources/rumin_resized_rotated.mp4')
+    def detectPedCrossing(self, source):
+        cap = cv2.VideoCapture(source)
         while cap.isOpened():
             ret, frame = cap.read()
             edges = self.generateCanny(frame,cap)
