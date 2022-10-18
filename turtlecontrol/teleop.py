@@ -61,7 +61,7 @@ class TeleopCmd(Node) :
             
         # Run crossing detection
         if msg.buttons[BUTTONA]:
-            turtlecontrol.crossing_cv2.CrossingDetection.detectPedCrossing()
+            turtlecontrol.crossing_cv2.CrossingDetection(self).detectPedCrossing()
 
 
         self.prev_buttons = msg.buttons
